@@ -44,12 +44,12 @@ class CreditController extends Controller
             $unique_id = strtotime($model->start_date) . $model->body_sum . $model->month . $model->rate;
             $unique_id = md5($unique_id);
             if (Credit::findOne(['unique_id' => $unique_id])) {
-                return $this->redirect('credit/view?unid='.$unique_id);
+                return $this->redirect('view?unid='.$unique_id);
             }
             $model->params = $model->calculate();
             $model->unique_id = $unique_id;
             if ($model->save()) {
-                return $this->redirect('credit/view?unid='.$unique_id);
+                return $this->redirect('view?unid='.$unique_id);
             }
         }
 
