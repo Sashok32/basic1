@@ -9,7 +9,7 @@ cd basic1
 composer install
 ~~~
 
-Then load credit.sql file (inside project) to your MySQL (dbname - 'yii2test', table - 'credit')
+Then load credit.sql (no migrations) file (inside project) to your MySQL (dbname - 'yii2test', table - 'credit')
 
 Now the application run at following URL.
 
